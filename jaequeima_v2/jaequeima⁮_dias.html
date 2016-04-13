@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html >
+	<head>
+		<meta charset="UTF-8">
+		<title>Já é Queima?</title>
+		<link rel="stylesheet" href="css/jaequeima_dias.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Oswald:300,400,700"/>
+	</head>
+	<body>
+		<div class="overlay_color"> </div>
+        <div class="overlay"> </div>
+		<div class="container">
+             <h1 class="title">Já é Queima!</h1>
+            <div id="bandas">
+            <h2 class="principal"> DJ Ride</h2>
+            <h3 class="secundario"> Regula</h3>
+            <h3 class="secundario"> Jimmy P</h3>
+            <h3 class="secundario"> MGDRV </h3>
+            </div>
+            <div id="precos">
+             <h3 class="precos"> Estudante - 8€</h3>
+             <h3 class="precos"> Não Estudante - 10€</h3>            
+            </div>
+           
+			<img id="logo" src="src/logo_big.png">
+		</div>
+        <div id="dias">
+                <a>sex </a>
+                <a>sab</a>
+                <a>dom</a>
+                <a>seg</a>
+                <a>ter</a>
+                <a>qua</a>
+                <a>qui</a>
+                <a>sex</a>
+            </div>
+
+	</body>
+    
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script>window.jQuery || document.write('<script src="js/jquery.min.js><\/script>')</script>
+         <script src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script>
+        var colors={"(0,70,137)","(238,50,36)","(255,196,37)","(0,150,215)","(83,36,127)","(238,50,36)","(249,157,49)","(85,25,0)"};
+        
+        
+        $("#dias a").each(function(this ) {
+            $(this).click(function(){
+                $(this).addClass("dia_selected");
+            });
+        });
+    </script>
+    
+</html>
