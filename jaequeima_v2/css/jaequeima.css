@@ -106,26 +106,3 @@ h2:after {
 	font-weight: 700;
 	font-weight: 32pt;
 }
-#dias{
-    position: absolute;
-    text-align: right;
-    right: 0;
-    display: block;
-    padding: 10px 30px 10px 10px;
-    top: 34vh;
-    width: 150px;
-}
-.dias{
-    width: 100%;
-    font-weight: 400;
-    font-size: 12pt;
-    display: block;
-    text-transform: uppercase;
-    padding: 2px;
-}
-.dias:hover{
-    cursor: pointer;
-}
-.dia_selected{
-    text-decoration: underline;
-}
