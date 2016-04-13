@@ -1,6 +1,5 @@
 body{
 	text-align: center;
-	font-family: Oswald;
 	font-weight: 100;
 	color: white;
 	margin-top: 10%;
@@ -8,6 +7,8 @@ body{
 	background-repeat: no-repeat;
 	background-size: 100%;
 	margin:0px 0px 0px 0px;
+	font-family: 'Oswald';
+
 }
 
 .overlay{
@@ -20,6 +21,17 @@ body{
 	top: 0px;
 	left: 0px;
 	z-index: -10;
+}
+.overlay_color{
+	height: 100vh;
+	width: 100%;
+	background-color: rgba(238,50,36,0.2);
+	background-size: 100%;
+	display: block;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: -15;
 }
 
 h1{
@@ -93,4 +105,27 @@ h2:after {
 .numbers{
 	font-weight: 700;
 	font-weight: 32pt;
+}
+#dias{
+    position: absolute;
+    text-align: right;
+    right: 0;
+    display: block;
+    padding: 10px 30px 10px 10px;
+    top: 34vh;
+    width: 150px;
+}
+.dias{
+    width: 100%;
+    font-weight: 400;
+    font-size: 12pt;
+    display: block;
+    text-transform: uppercase;
+    padding: 2px;
+}
+.dias:hover{
+    cursor: pointer;
+}
+.dia_selected{
+    text-decoration: underline;
 }

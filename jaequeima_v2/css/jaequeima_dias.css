@@ -20,6 +20,10 @@ body{
 	top: 0px;
 	left: 0px;
 	z-index: -15;
+	-webkit-transition-duration: 0.2s;
+      -moz-transition-duration: 0.2s;
+      -o-transition-duration: 0.2s;
+      transition-duration: 0.2s;
 }
 .overlay{
 	height: 100vh;
@@ -64,6 +68,7 @@ h1{
 #precos{
     margin-top: 10px;
 }
+/*
 #bandas:after {
 	content: '';
 	display: block;
@@ -75,17 +80,8 @@ h1{
     margin-right: auto;
     margin-left: auto;
 }
-h1:after {
-	content: '';
-	display: block;
-	background:rgb(238,50,36);
-	height: 3px;
-	max-width: 35px;
-	width: 100%;
-	margin-top: 80px;
-    margin-right: auto;
-    margin-left: auto;
-}
+*/
+
 
 #clockdiv{
 	display: inline-block;
@@ -125,6 +121,16 @@ h1:after {
 	font-size: 42pt;
 	font-weight: 700;
 }
+.border{
+    height: 0px;
+    width: 4%;
+    margin-left: 48%;
+    margin-right: 48%;
+  	border-bottom: 3px solid rgb(238,50,36);
+  	display: block;
+  	position: relative;
+
+}
 .subtitle{
 	color: white;
 	font-size: 22pt;
@@ -135,7 +141,6 @@ h1:after {
 	font-weight: 700;
 	font-weight: 32pt;
 }
-
 #dias{
     position: absolute;
     text-align: right;
@@ -145,15 +150,24 @@ h1:after {
     top: 34vh;
     width: 150px;
 }
-#dias a{
+.dias{
+	color: white;
     width: 100%;
     font-weight: 400;
     font-size: 12pt;
     display: block;
     text-transform: uppercase;
     padding: 2px;
-}_
+    text-decoration: none;
+}
+.dias:hover{
+    cursor: pointer;
+    color: gray;
+}
 .dia_selected{
-    color: rgb(238,50,36);
     text-decoration: underline;
+    -webkit-transition-duration: 0.2s;
+      -moz-transition-duration: 0.2s;
+      -o-transition-duration: 0.2s;
+      transition-duration: 0.2s;
 }
