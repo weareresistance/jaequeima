@@ -1,4 +1,6 @@
 body{
+	margin: 0px;
+	padding: 0px;
 	background:
 		linear-gradient(
 			rgba(65,65,65,0.7),
@@ -7,12 +9,11 @@ body{
 	background-repeat: no-repeat;
 	background-size: cover;
 	min-height: 100vh;
+	font-family: 'Oswald', sans-serif;
 	text-align: center;
 	font-weight: 100;
 	color: white;
-	margin-top: 10%;
-	margin:0px 0px 0px 0px;
-	font-family: 'Oswald';
+}
 
 }
 
@@ -27,30 +28,40 @@ body{
 	top: 0px;
 	left: 0px;
 	z-index: -15;
+} */
+
+h1, h2 {
+	margin: 0px;
+	padding: 0px;
 }
 
-h1{
+.title{
+	color: white;
+	font-size: 42pt;
+	font-weight: 700;
 	text-transform: uppercase;
 	font-weight: 100;
 	font-size: 50px;
-	margin: 20px 0px 100px;
+	/* margin: 20px 0px 100px; */
 }
-
-h2{
+.subtitle{
+	color: white;
+	font-size: 22pt;
+	font-weight: 300;
 	font-weight: 100;
-	font-size: 20px;
 	text-transform: uppercase;
-	margin: 40px 0px 20px;
+	/* margin: 40px 0px 20px; */
 }
 
-h2:after {
+.subtitle:after {
 	content: '';
 	display: block;
-	background: white;
-	height: 3px;
+	margin: 0 auto;
+	margin-top: 8px;
 	max-width: 35px;
 	width: 100%;
-	margin: 0 auto;
+	height: 3px;
+	background: white;
 }
 
 #clockdiv{
@@ -76,28 +87,11 @@ h2:after {
 	font-size: 16px;
 }
 
-#logo{
-	width: 80px;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	position: absolute;
-	top: 90vh;
-	left: 48%;
-}
-.title{
-	color: white;
-	margin-top: 40px;
-	font-size: 42pt;
-	font-weight: 700;
-}
-.subtitle{
-	color: white;
-	font-size: 22pt;
-	font-weight: 300;
-
-}
 .numbers{
 	font-weight: 700;
 	font-weight: 32pt;
+}
+
+#logo{
+	width: 80px;
 }
