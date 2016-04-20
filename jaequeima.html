@@ -1,52 +1,44 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Já é Queima?</title>
-        <meta charset = "utf-8">
-		<link rel="stylesheet" href="css/FlipClock.css">
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<script src="code/FlipClock.js"></script>
+<html >
+	<head>
+		<meta charset="UTF-8">
+		<title>Já é Queima?</title>
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/jaequeima.css">
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Oswald:300,400,700"/>
 	</head>
 	<body>
-		<text>
-			<p id="frase">Já é Queima?</p>
-			<p id="frase2">Ainda não é Queima!</p>
-		</text>
-		
-		<div class="clock" style="margin:2em;"></div>
-		<div class="message"></div>
-		<script type="text/javascript">
-			var clock;
-			
-			$(document).ready(function() {
-				var futureDate  = new Date("2016/05/06");
-				var currentDate = new Date();
+		<!-- <div class="overlay"> </div> -->
+		<div class="container">
+			<div class="container_top">
+				<h1 class="title">Teste</h1>
+			</div>
+			<div class="container_middle">
+				<h2 class="subtitle">Faltam</h2>
+				<div id="clockdiv">
+					<div>
+						<span class="dias numbers"></span>
+						<div class="legenda">Dias</div>
+					</div>
+					<div>
+						<span class="horas numbers"></span>
+						<div class="legenda">Horas</div>
+					</div>
+					<div>
+						<span class="minutos numbers"></span>
+						<div class="legenda">Minutos</div>
+					</div>
+					<div>
+						<span class="segundos numbers"></span>
+						<div class="legenda">Segundos</div>
+					</div>
+				</div>
+			</div>
+			<script src="code/jaequeima.js"></script>
+			<div class="container_bottom">
+				<img id="logo" src="src/logo_big.png">
+			</div>
+		</div>
 
-				var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
-
-				function dayDiff(first, second) {
-					return (second-first)/(1000*60*60*24);
-				}
-
-				if (dayDiff(currentDate, futureDate) < 100) {
-					$('.clock').addClass('twoDayDigits');
-				} else {
-					$('.clock').addClass('threeDayDigits');
-				}
-
-				if(diff < 0) {
-					diff = 0;
-				}
-
-				clock = $('.clock').FlipClock(diff, {
-					clockFace: 'DailyCounter',
-					countdown: true
-				});
-			});
-		</script>
-
-
-		<img id="logo" src="src/logo.png">
-	
 	</body>
 </html>
