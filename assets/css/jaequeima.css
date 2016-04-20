@@ -47,12 +47,9 @@ h1, h2 {
 
 .title{
 	color: white;
+	margin-top: 40px;
 	font-size: 42pt;
 	font-weight: 700;
-	text-transform: uppercase;
-	font-weight: 100;
-	font-size: 50px;
-	/* margin: 20px 0px 100px; */
 }
 .subtitle{
 	color: white;
@@ -103,5 +100,11 @@ h1, h2 {
 }
 
 #logo{
-	width: 80px;
+	width: 10%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	position: absolute;
+	top: 90vh;
+	left: 45%;
 }
