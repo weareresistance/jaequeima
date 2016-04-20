@@ -18,27 +18,25 @@
         <div class="container_middle">
             <div id="bandas">
                 <?php 
-                        require("config.php"); 
-                        $id = 0;
-                        if (isset($_GET["id"])){
-                            $id = $_GET["id"];
-                        }
-                        $query = "SELECT * FROM `main` WHERE 'Dia' = " . $id;
-                        $stmt = $db->prepare($query); 
-                        $stmt->execute();
+                    require("config.php"); 
+                    $id = 0;
+                    if (isset($_GET["id"])){
+                        $id = $_GET["id"];
+                    }
+                    $query = "SELECT * FROM main WHERE Dia = '". $id."'";
+                    $stmt = $db->prepare($query); 
+                    $stmt->execute();
              
-                        $rows = $stmt->fetchAll();
+                    $rows = $stmt->fetchAll();
               
-
-                        foreach ($rows as $value){
-                     
-                            if ($value['Tipo'] == 1){
-                                echo "<h2 class='principal'>".$value["Info"] ."</h2>";
-                            } elseif ($value["Tipo"] == 2) {
-                                echo "<h3 class='secundario'>" .$value["Info"] ."</h3>";
-                            }
-                           
+                    foreach ($rows as $value){
+                        if ($value['Tipo'] == 1){
+                            echo "<h2 class='principal'>".$value["Info"] ."</h2>";
+                        } elseif ($value["Tipo"] == 2) {
+                            echo "<h3 class='secundario'>" .$value["Info"] ."</h3>";
                         }
+                           
+                    }
 
                 ?>
             </div>
@@ -53,7 +51,8 @@
                        
                     }
                  ?>€</h3>
-                 <h3 class="precos"> Não Estudante - <?php
+                 <h3 class="precos"> Não Estudante - 
+                    <?php
                         foreach ($rows as $value){
                                 
                             if ($value["Tipo"] == 4){
