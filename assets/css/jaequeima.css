@@ -52,6 +52,7 @@ h1, h2 {
 	font-weight: 700;
 }
 .subtitle{
+	    margin-top: 0px;
 	color: white;
 	font-size: 22pt;
 	font-weight: 300;

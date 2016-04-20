@@ -11,34 +11,35 @@
         <div class="overlay"> </div>
 		  <div class="container">
             <div class="container_top">
-            <h1 class="title ">Já é Queima!</h1>
-            <div class="border"> </div>
-        </div>
-        </div>
-            
-<div class="container_middle">
+                <h1 class="title ">Já é Queima!</h1>
+                <div class="border"> </div>
+            </div>
+
+        <div class="container_middle">
             <div id="bandas">
                 <?php 
-                    $id = 0;
-                    if (isset($_GET["id"])){
-                        $id = $_GET["id"];
-                    }
-                    echo "<script>updateColor(" . $id .");<script>";
-                    $query = "Select * from main where 'Dia' = " . $id;
-                    $stmt = $db->prepare($query); 
-                    $stmt->execute();
-                     
-                    $rows = $stmt->fetch();
-
-                    foreach ($rows as $value){
-                                    
-                        if ($value["Tipo"] == 1){
-                            echo "<h2 class='principal'>".$value["banda"] ."</h2>";
-                        } elseif ($value["Tipo"] == 2) {
-                            echo "<h3 class='secundario'>" .$value["banda"] ."</h3>";
+                        require("config.php"); 
+                        $id = 0;
+                        if (isset($_GET["id"])){
+                            $id = $_GET["id"];
                         }
-                                   
-                    }
+                        $query = "SELECT * FROM `main` WHERE 'Dia' = " . $id;
+                        $stmt = $db->prepare($query); 
+                        $stmt->execute();
+             
+                        $rows = $stmt->fetchAll();
+              
+
+                        foreach ($rows as $value){
+                     
+                            if ($value['Tipo'] == 1){
+                                echo "<h2 class='principal'>".$value["Info"] ."</h2>";
+                            } elseif ($value["Tipo"] == 2) {
+                                echo "<h3 class='secundario'>" .$value["Info"] ."</h3>";
+                            }
+                           
+                        }
+
                 ?>
             </div>
             <div id="precos">
@@ -47,7 +48,7 @@
                     foreach ($rows as $value){
                             
                         if ($value["Tipo"] == 3){
-                            echo "<h2 class='principal'>".$value["Info"] ."</h2>";
+                            echo $value["Info"];
                         }
                        
                     }
@@ -56,7 +57,7 @@
                         foreach ($rows as $value){
                                 
                             if ($value["Tipo"] == 4){
-                                echo "<h2 class='principal'>".$value["Info"] ."</h2>";
+                                echo $value["Info"];
                             }
                            
                         }
@@ -64,21 +65,22 @@
             </div>
 
 		
-        <div id="dias">
-                <a id="0" class="dias">sex </a>
-                <a id="1" class="dias">sab</a>
-                <a id="2" class="dias">dom</a>
-                <a id="3" class="dias">seg</a>
-                <a id="4" class="dias">ter</a>
-                <a id="5" class="dias">qua</a>
-                <a id="6" class="dias">qui</a>
-                <a id="7" class="dias">sex</a>
-            </div>
-</div>
+            <div id="dias">
+                    <a id="0" class="dias">sex </a>
+                    <a id="1" class="dias">sab</a>
+                    <a id="2" class="dias">dom</a>
+                    <a id="3" class="dias">seg</a>
+                    <a id="4" class="dias">ter</a>
+                    <a id="5" class="dias">qua</a>
+                    <a id="6" class="dias">qui</a>
+                    <a id="7" class="dias">sex</a>
+                </div>
+        </div>
 
-<div class="container_bottom">
-                <img id="logo" src="assets/img/logo_big.png">
-            </div>
+        <div class="container_bottom">
+            <img id="logo" src="assets/img/logo_big.png">
+        </div>
+        </div>
 	</body>
 
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -93,9 +95,10 @@
         $(".dias").each(function() {
             $(this).click(function(){
                 id= $(this).attr('id');
-                //window.location.href = "jaequeima_dias.php?_id=" + id;
+                window.location.href = "index.php?id=" + id;
             });
         });
+        updateColor(<?php echo $id; ?>);
         function updateColor(id){
             for(var i=0; i<numberDias; i++){
                 if( i== id){
