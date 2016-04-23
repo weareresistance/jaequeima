@@ -9,6 +9,9 @@
 
 	</head>
 	<body>
+		<?php // Google Analytics Tracking Code ?>
+		<?php include_once("analyticstracking.php") ?>
+		
 		<div class="overlay_color"> </div>
         <div class="overlay"> </div>
 		  <div class="container">
@@ -19,53 +22,53 @@
 
         <div class="container_middle">
             <div id="bandas">
-                <?php 
-                    require("config.php"); 
+                <?php
+                    require("config.php");
                     $id = 0;
                     if (isset($_GET["id"])){
                         $id = $_GET["id"];
                     }
                     $query = "SELECT * FROM main WHERE Dia = '". $id."'";
-                    $stmt = $db->prepare($query); 
+                    $stmt = $db->prepare($query);
                     $stmt->execute();
-             
+
                     $rows = $stmt->fetchAll();
-              
+
                     foreach ($rows as $value){
                         if ($value['Tipo'] == 1){
                             echo "<h2 class='principal'>".$value["Info"] ."</h2>";
                         } elseif ($value["Tipo"] == 2) {
                             echo "<h3 class='secundario'>" .$value["Info"] ."</h3>";
                         }
-                           
+
                     }
 
                 ?>
             </div>
             <div id="precos">
                 <div class="border"> </div>
-                  <h3 class="precos"> Estudante -  
+                  <h3 class="precos"> Estudante -
                     <?php
                     foreach ($rows as $value){
                         if ($value["Tipo"] == 3){
                             echo $value["Info"];
                         }
-                       
+
                     }
                  ?>€</h3>
-                 <h3 class="precos"> Não Estudante - 
+                 <h3 class="precos"> Não Estudante -
                     <?php
                         foreach ($rows as $value){
-                                
+
                             if ($value["Tipo"] == 4){
                                 echo $value["Info"];
                             }
-                           
+
                         }
-                     ?>€</h3>     
+                     ?>€</h3>
             </div>
 
-		
+
             <div id="dias">
                     <a id="0" class="dias">sex </a>
                     <a id="1" class="dias">sab</a>
@@ -82,7 +85,7 @@
             <img id="logo" src="assets/img/logo_big.png">
                 <div class="button_fb" id="share_button" >
                     <a href="https://www.facebook.com/sharer/sharer.php&u=index.php&id=<?php echo $id;?>" target="_blank">
-                        <i class="fa fa-facebook-official"></i> Partilhar 
+                        <i class="fa fa-facebook-official"></i> Partilhar
                     </a>
                 </div>
         </div>

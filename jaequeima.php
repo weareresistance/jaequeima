@@ -10,6 +10,8 @@
 
 	</head>
 	<body>
+		<?php // Google Analytics Tracking Code ?>
+		<?php include_once("analyticstracking.php") ?>
 		<!-- <div class="overlay"> </div> -->
 		<div class="container">
 			<div class="container_top">
@@ -39,13 +41,13 @@
 			<script src="assets/js/jaequeima.js"></script>
 			<div class="container_bottom">
 				<img id="logo" src="assets/img/logo_big.png">
-				<?php 
+				<?php
 	                $link = get_permalink();
 	                $link = 'https://www.facebook.com/sharer/sharer.php?u='.$link;
 	            ?>
 	            <div class="button_fb" id="share_button" >
 	                <a href="<?php echo $link; ?>" target="_blank">
-	                    <i class="fa fa-facebook-official"></i> Partilhar 
+	                    <i class="fa fa-facebook-official"></i> Partilhar
 	                </a>
 	            </div>
 			</div>
