@@ -60,27 +60,30 @@ h1{
 
 .principal{
 	font-weight: 400;
-	font-size: 32pt;
+	font-size: 28pt;
 	text-transform: uppercase;
-	margin: 10px 0px 0px;
+	margin: 5px 0px 0px;
     font-family: 'Oswald';
 }
 
 .secundario{
     font-weight: 300;
-    font-size: 22pt;
+    font-size: 16pt;
 	text-transform: uppercase;
-    margin: 0px 0px 0px;
+    margin: 5px 0px 0px 0px;
 }
 .precos{
      font-weight: 300;
-    font-size: 14pt;
-    margin: 0px 0px 0px;
+    font-size: 13pt;
+    margin: 2px 0px 0px 0px;
     
 }
 
 #precos{
-    margin-top: 10px;
+    position: absolute;
+    top:65vh;
+    text-align: center;
+    width: 100%;
 }
 /*
 #bandas:after {
@@ -140,6 +143,11 @@ h1{
     width: 4%;
     margin-left: 48%;
     margin-right: 48%;
+
+    margin-top: 20px;
+    padding-top: 30px;
+    margin-bottom: 10px;
+
   	border-bottom: 3px solid rgb(238,50,36);
   	display: block;
   	position: relative;

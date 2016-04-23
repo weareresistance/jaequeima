@@ -8,6 +8,12 @@
 		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Oswald:300,400,700"/>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 
+		<meta property="og:url"           content="http://www.your-domain.com/your-page.html" />
+		<meta property="og:type"          content="website" />
+		<meta property="og:title"         content="Já é Queima" />
+		<meta property="og:description"   content="Your description" />
+		<meta property="og:image"         content="http://localhost:8888/jaequeima/img/background.png" />
+
 	</head>
 	<body>
 		<?php // Google Analytics Tracking Code ?>
@@ -41,13 +47,9 @@
 			<script src="assets/js/jaequeima.js"></script>
 			<div class="container_bottom">
 				<img id="logo" src="assets/img/logo_big.png">
-				<?php
-	                $link = get_permalink();
-	                $link = 'https://www.facebook.com/sharer/sharer.php?u='.$link;
-	            ?>
-	            <div class="button_fb" id="share_button" >
-	                <a href="<?php echo $link; ?>" target="_blank">
-	                    <i class="fa fa-facebook-official"></i> Partilhar
+				<div class="button_fb" id="share_button" >
+	                <a href="https://www.facebook.com/sharer/sharer.php?u=localhost:8888/jaequeima/jaequeima.php" target="_blank">
+	                    <i class="fa fa-facebook-official"></i> Partilhar 
 	                </a>
 	            </div>
 			</div>
