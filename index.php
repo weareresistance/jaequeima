@@ -5,6 +5,8 @@
 		<title>Já é Queima?</title>
         <link rel="stylesheet" href="assets/css/jaequeima_dias.css">
 		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Oswald:300,400,700"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
 	</head>
 	<body>
 		<div class="overlay_color"> </div>
@@ -42,9 +44,9 @@
             </div>
             <div id="precos">
                 <div class="border"> </div>
-                  <h3 class="precos"> Estudante -  <?php
+                  <h3 class="precos"> Estudante -  
+                    <?php
                     foreach ($rows as $value){
-                            
                         if ($value["Tipo"] == 3){
                             echo $value["Info"];
                         }
@@ -78,6 +80,11 @@
 
         <div class="container_bottom">
             <img id="logo" src="assets/img/logo_big.png">
+                <div class="button_fb" id="share_button" >
+                    <a href="https://www.facebook.com/sharer/sharer.php&u=index.php&id=<?php echo $id;?>" target="_blank">
+                        <i class="fa fa-facebook-official"></i> Partilhar 
+                    </a>
+                </div>
         </div>
         </div>
 	</body>
