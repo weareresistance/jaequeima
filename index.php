@@ -169,7 +169,9 @@
 				</div>
 				<script src="assets/js/jaequeima.js"></script>
 				<div class="container_bottom">
-					<img id="logo" src="assets/img/logo_big.png">
+					<a href="http://resistance.pt?utm_source=jaequeima_a">
+						<img id="logo" src="assets/img/logo_big.png">
+					</a>
 					<div class="button_fb" id="share_button" >
 		                <a href="https://www.facebook.com/sharer/sharer.php?u=http://jaequeima.pt/" target="_blank">
 		                    <i class="fa fa-facebook-official"></i> Partilhar
