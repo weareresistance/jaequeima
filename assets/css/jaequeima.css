@@ -125,7 +125,11 @@ h1, h2 {
 }
 .button_fb a{
 	color: white;
+	width: 20%;
 	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	
     margin-bottom: 7vh;
     text-decoration: none;
 	

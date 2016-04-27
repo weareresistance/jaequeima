@@ -32,20 +32,40 @@
 		<meta name="msapplication-TileImage" content="assets/img/favicon/mstile-144x144.png">
 		<meta name="theme-color" content="#ffffff">
 
-		<?php $incioQueima = "2016-05-04 21:00:00"; 
+		<?php
+		 $incioQueima = "2016-05-04 21:00:00"; 
+		//$incioQueima = "2016-04-25 21:00:00"; 
 		    
-    $today = date('Y-m-d');
-    $today = strtotime($today);
-    $finish = strtotime($incioQueima);
-    //difference
-    $diff = $finish - $today;
+	    $today = date('Y-m-d');
+	    $finish = $incioQueima;
 
-    $daysleft=floor($diff/(60*60*24));
-?>
-		
+	    $sepparator = '-';
+		$parts_today = explode($sepparator, $today);
+		$parts_finish= explode($sepparator, $finish);
+
+
+		$days_difference = $parts_today[2] - $parts_finish[2];
+	    //difference
+		$diff = abs(strtotime($finish) - strtotime($today));
+		$daysleft=floor($diff/(60*60*24));
+
+
+	?>
+			
 
 		<?php if (new DateTime() > new DateTime($incioQueima)) { ?>
         	<link rel="stylesheet" href="assets/css/jaequeima_dias.css">
+        	<script> 
+        		console.log('<?php echo  $days_difference; ?>');
+        		<?php 
+        			if (!isset($_GET["id"])){ ?>
+	                      window.location.href = "index.php?id=" +<?php echo $days_difference; ?>;
+	            <?php
+	                }
+        		?>
+
+        	</script>
+
 		<?php } else { ?>
 			<link rel="stylesheet" href="assets/css/jaequeima.css">
 		<?php } ?>
@@ -185,8 +205,7 @@
 
 	<?php if (new DateTime() > new DateTime($incioQueima)) { ?>
 		<script>window.jQuery || document.write('<script src="js/jquery.min.js><\/script>')</script>
-	    <script src="js/bootstrap.min.js"></script>
-	    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+			    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 	    <script src="js/ie10-viewport-bug-workaround.js"></script>
 	    <script>
 	        var id=0;
@@ -216,13 +235,5 @@
 	    </script>
 	<?php } else { ?>
 		<script src="assets/js/jaequeima.js"></script>
-		<div class="container_bottom">
-			<img id="logo" src="assets/img/logo_big.png">
-			<div class="button_fb" id="share_button" >
-				<a href="https://www.facebook.com/sharer/sharer.php?u=localhost:8888/jaequeima/jaequeima.php" target="_blank">
-					<i class="fa fa-facebook-official"></i> Partilhar
-				</a>
-			</div>
-		</div>
 	<?php } ?>
 </html>
