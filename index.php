@@ -10,7 +10,7 @@
 		<meta name="keywords" content="">
 		<meta name="robots" content="index, follow">
 		<meta name="googlebot" content="index, follow">
-		
+
 		<link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicon/apple-touch-icon-57x57.png">
 		<link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicon/apple-touch-icon-60x60.png">
 		<link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicon/apple-touch-icon-72x72.png">
@@ -32,8 +32,8 @@
 		<meta name="msapplication-TileImage" content="assets/img/favicon/mstile-144x144.png">
 		<meta name="theme-color" content="#ffffff">
 
-		<?php $incioQueima = "2016-05-04 21:00:00"; 
-		    
+		<?php $incioQueima = "2016-05-04 21:00:00";
+
     $today = date('Y-m-d');
     $today = strtotime($today);
     $finish = strtotime($incioQueima);
@@ -42,15 +42,15 @@
 
     $daysleft=floor($diff/(60*60*24));
 ?>
-		
+
 
 		<?php if (new DateTime() > new DateTime($incioQueima)) { ?>
         	<link rel="stylesheet" href="assets/css/jaequeima_dias.css">
 		<?php } else { ?>
 			<link rel="stylesheet" href="assets/css/jaequeima.css">
 		<?php } ?>
-		
-		
+
+
 		<meta property="og:url"           content="http://jaequeima.pt" />
 		<meta property="og:type"          content="website" />
 		<meta property="og:title"         content="Ja é Queima?" />
@@ -214,15 +214,5 @@
 
 	        }
 	    </script>
-	<?php } else { ?>
-		<script src="assets/js/jaequeima.js"></script>
-		<div class="container_bottom">
-			<img id="logo" src="assets/img/logo_big.png">
-			<div class="button_fb" id="share_button" >
-				<a href="https://www.facebook.com/sharer/sharer.php?u=localhost:8888/jaequeima/jaequeima.php" target="_blank">
-					<i class="fa fa-facebook-official"></i> Partilhar
-				</a>
-			</div>
-		</div>
 	<?php } ?>
 </html>
