@@ -33,8 +33,8 @@
 		<meta name="theme-color" content="#ffffff">
 
 		<?php
-		 $incioQueima = "2016-05-04 21:00:00"; 
-		//$incioQueima = "2016-04-25 21:00:00"; 
+		$incioQueima = "2016-05-04 21:00:00"; 
+		//$incioQueima = "2016-04-27 21:00:00"; 
 		    
 	    $today = date('Y-m-d');
 	    $finish = $incioQueima;
