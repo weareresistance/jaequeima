@@ -10,7 +10,7 @@
 		<meta name="keywords" content="">
 		<meta name="robots" content="index, follow">
 		<meta name="googlebot" content="index, follow">
-
+		
 		<link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicon/apple-touch-icon-57x57.png">
 		<link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicon/apple-touch-icon-60x60.png">
 		<link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicon/apple-touch-icon-72x72.png">
@@ -32,7 +32,6 @@
 		<meta name="msapplication-TileImage" content="assets/img/favicon/mstile-144x144.png">
 		<meta name="theme-color" content="#ffffff">
 
-<<<<<<< HEAD
 		<?php
 		 $incioQueima = "2016-05-04 21:00:00"; 
 		//$incioQueima = "2016-04-25 21:00:00"; 
@@ -53,19 +52,6 @@
 
 	?>
 			
-=======
-		<?php $incioQueima = "2016-05-04 21:00:00";
-
-    $today = date('Y-m-d');
-    $today = strtotime($today);
-    $finish = strtotime($incioQueima);
-    //difference
-    $diff = $finish - $today;
-
-    $daysleft=floor($diff/(60*60*24));
-?>
-
->>>>>>> b9b13666fad59763148f7dd6abe5a91c23beab2a
 
 		<?php if (new DateTime() > new DateTime($incioQueima)) { ?>
         	<link rel="stylesheet" href="assets/css/jaequeima_dias.css">
@@ -83,8 +69,8 @@
 		<?php } else { ?>
 			<link rel="stylesheet" href="assets/css/jaequeima.css">
 		<?php } ?>
-
-
+		
+		
 		<meta property="og:url"           content="http://jaequeima.pt" />
 		<meta property="og:type"          content="website" />
 		<meta property="og:title"         content="Ja é Queima?" />
@@ -203,9 +189,7 @@
 				</div>
 				<script src="assets/js/jaequeima.js"></script>
 				<div class="container_bottom">
-					<a href="http://resistance.pt?utm_source=jaequeima_a">
-						<img id="logo" src="assets/img/logo_big.png">
-					</a>
+					<img id="logo" src="assets/img/logo_big.png">
 					<div class="button_fb" id="share_button" >
 		                <a href="https://www.facebook.com/sharer/sharer.php?u=http://jaequeima.pt/" target="_blank">
 		                    <i class="fa fa-facebook-official"></i> Partilhar
@@ -249,10 +233,7 @@
 
 	        }
 	    </script>
-<<<<<<< HEAD
 	<?php } else { ?>
 		<script src="assets/js/jaequeima.js"></script>
-=======
->>>>>>> b9b13666fad59763148f7dd6abe5a91c23beab2a
 	<?php } ?>
 </html>
