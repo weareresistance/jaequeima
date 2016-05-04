@@ -60,9 +60,9 @@ h1{
 
 .principal{
 	font-weight: 400;
-	font-size: 28pt;
+	font-size: 32pt;
 	text-transform: uppercase;
-	margin: 5px 0px 0px;
+	margin: 6px 40px 0px 40px;
     font-family: 'Oswald';
 }
 
@@ -70,7 +70,7 @@ h1{
     font-weight: 300;
     font-size: 16pt;
 	text-transform: uppercase;
-    margin: 5px 0px 0px 0px;
+    margin: 6px 40px 0px 40px;
 }
 .precos{
      font-weight: 300;
@@ -192,4 +192,19 @@ h1{
       -moz-transition-duration: 0.2s;
       -o-transition-duration: 0.2s;
       transition-duration: 0.2s;
+}
+
+/*  pequeno */
+@media(max-width: 480px){
+	#dias{
+	    padding: 10px 10px 10px 10px;
+	}
+	.secundario{
+		font-size: 15pt;
+	}
+	#logo{
+		width: 40%;
+		left: 30%;
+		right: 30%;
+	}
 }

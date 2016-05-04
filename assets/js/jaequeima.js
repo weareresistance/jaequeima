@@ -1,8 +1,7 @@
 "use strict";
 
-(function()
-{
-	var deadline = new Date("2016/05/06");
+(function(){
+	//var deadline = new Date("2016-05-06 21:00:00");
 	initializeClock('clockdiv', deadline);
 }());
 

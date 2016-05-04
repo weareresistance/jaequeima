@@ -34,8 +34,9 @@
 
 		<?php
 		//$incioQueima = "2016-05-04 21:00:00"; 
-		$incioQueima = "2016-04-30 21:00:00"; 
+		$incioQueima = "2016-05-02 21:00:00"; 
 		$fimQueima = "2016-05-13 21:00:00"; 
+
 		    
 	    $today = date('Y-m-d');
 	    $finish = $incioQueima;
@@ -67,7 +68,14 @@
 
         	</script>
 
-		<?php } else { ?>
+		<?php } else { 
+			if (new DateTime() > new DateTime($fimQueima)) { ?>
+				<script>var deadline = new Date("2017-05-05 21:00:00");</script>
+
+			<?php } else{?>
+				<script>var deadline = new Date("2016-05-06 21:00:00");</script>
+
+			<?php }?>
 			<link rel="stylesheet" href="assets/css/jaequeima.css">
 		<?php } ?>
 		
