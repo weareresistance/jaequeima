@@ -33,8 +33,9 @@
 		<meta name="theme-color" content="#ffffff">
 
 		<?php
-		$incioQueima = "2016-05-04 21:00:00"; 
-		//$incioQueima = "2016-04-27 21:00:00"; 
+		//$incioQueima = "2016-05-04 21:00:00"; 
+		$incioQueima = "2016-04-30 21:00:00"; 
+		$fimQueima = "2016-05-13 21:00:00"; 
 		    
 	    $today = date('Y-m-d');
 	    $finish = $incioQueima;
@@ -53,7 +54,7 @@
 	?>
 			
 
-		<?php if (new DateTime() > new DateTime($incioQueima)) { ?>
+		<?php if (new DateTime() > new DateTime($incioQueima) && $days_difference >=0) { ?>
         	<link rel="stylesheet" href="assets/css/jaequeima_dias.css">
         	<script> 
         		console.log('<?php echo  $days_difference; ?>');
@@ -85,7 +86,7 @@
 		<?php // Google Analytics Tracking Code ?>
 		<?php include_once("analyticstracking.php") ?>
 
-		<?php if (new DateTime() > new DateTime($incioQueima)) { ?>
+		<?php if (new DateTime() > new DateTime($incioQueima)&& $days_difference >=0) { ?>
 
 			<div class="overlay_color"> </div>
 	        <div class="overlay"> </div>
@@ -203,7 +204,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
-	<?php if (new DateTime() > new DateTime($incioQueima)) { ?>
+	<?php if (new DateTime() > new DateTime($incioQueima)&& $days_difference >=0 ) { ?>
 		<script>window.jQuery || document.write('<script src="js/jquery.min.js><\/script>')</script>
 			    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 	    <script src="js/ie10-viewport-bug-workaround.js"></script>
