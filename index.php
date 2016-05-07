@@ -10,7 +10,7 @@
 		<meta name="keywords" content="">
 		<meta name="robots" content="index, follow">
 		<meta name="googlebot" content="index, follow">
-		
+
 		<link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicon/apple-touch-icon-57x57.png">
 		<link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicon/apple-touch-icon-60x60.png">
 		<link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicon/apple-touch-icon-72x72.png">
@@ -33,11 +33,11 @@
 		<meta name="theme-color" content="#ffffff">
 
 		<?php
-		//$incioQueima = "2016-05-04 21:00:00"; 
-		$incioQueima = "2016-05-06 21:00:00"; 
-		$fimQueima = "2016-05-13 21:00:00"; 
+		//$incioQueima = "2016-05-04 21:00:00";
+		$incioQueima = "2016-05-06 21:00:00";
+		$fimQueima = "2016-05-13 21:00:00";
 
-		    
+
 	    $today = date('Y-m-d');
 	    $finish = $incioQueima;
 
@@ -53,13 +53,13 @@
 
 
 	?>
-			
+
 
 		<?php if (new DateTime() > new DateTime($incioQueima) && $days_difference >=0) { ?>
         	<link rel="stylesheet" href="assets/css/jaequeima_dias.css">
-        	<script> 
+        	<script>
         		console.log('<?php echo  $days_difference; ?>');
-        		<?php 
+        		<?php
         			if (!isset($_GET["id"])){ ?>
 	                      window.location.href = "index.php?id=" +<?php echo $days_difference; ?>;
 	            <?php
@@ -68,7 +68,7 @@
 
         	</script>
 
-		<?php } else { 
+		<?php } else {
 			if (new DateTime() > new DateTime($fimQueima)) { ?>
 				<script>var deadline = new Date("2017-05-05 21:00:00");</script>
 
@@ -78,8 +78,8 @@
 			<?php }?>
 			<link rel="stylesheet" href="assets/css/jaequeima.css">
 		<?php } ?>
-		
-		
+
+
 		<meta property="og:url"           content="http://jaequeima.pt" />
 		<meta property="og:type"          content="website" />
 		<meta property="og:title"         content="Ja é Queima?" />
@@ -97,7 +97,6 @@
 		<?php if (new DateTime() > new DateTime($incioQueima)&& $days_difference >=0) { ?>
 
 			<div class="overlay_color"> </div>
-	        <div class="overlay"> </div>
 			  <div class="container">
 	            <div class="container_top">
 	                <h1 class="title ">Já é Queima!</h1>
@@ -166,7 +165,10 @@
 	        </div>
 
 	        <div class="container_bottom">
-	            <img id="logo" src="assets/img/logo_big.png">
+				<a href="http://resistance.pt">
+					<img id="logo" src="assets/img/logo_big.png">
+				</a>
+
 	        </div>
 	        </div>
 
