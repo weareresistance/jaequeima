@@ -1,0 +1,177 @@
+body{
+	text-align: center;
+	font-family: 'Oswald';
+	font-weight: 100;
+	color: white;
+
+	/*position: absolute;*/
+	width: 100vw;
+    height: 100%;
+    margin: 0px;
+	background:
+		linear-gradient(
+			rgba(65,65,65,0.7),
+			rgba(65,65,65,0.7)
+    	), url("../img/background.png");
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-position: right;
+    /*background-attachment: fixed;*/
+    vertical-align: middle;
+    background-color: #636363;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 50px 20px;
+	box-sizing: border-box;
+}
+
+.container_middle {
+	padding-bottom: 40px;
+}
+
+.overlay_color{
+	height: 100vh;
+	width: 100%;
+	background-color: rgba(238,50,36,0.2);
+	background-size: 100%;
+	display: block;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: -15;
+} 
+
+h1, h2 {
+	margin: 0px;
+	padding: 0px;
+}
+
+.title{
+	color: white;
+	margin-top: 40px;
+	font-size: 42pt;
+	font-weight: 700;
+	text-transform: uppercase;
+
+}
+.subtitle{
+	    margin-top: 0px;
+	color: white;
+	font-size: 22pt;
+	font-weight: 300;
+	font-weight: 100;
+	text-transform: uppercase;
+	/* margin: 40px 0px 20px; */
+}
+
+.subtitle:after {
+	content: '';
+	display: block;
+	margin: 0 auto;
+	margin-top: 8px;
+	max-width: 35px;
+	width: 100%;
+	height: 3px;
+	background: white;
+}
+
+#clockdiv{
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+	font-size: 48pt;
+}
+
+#clockdiv > div{
+	padding: 10px;
+	display: inline-block;
+}
+
+#clockdiv div > span{
+	padding: 30px;
+	display: inline-block;
+}
+
+.legenda{
+	display: inline-block;
+	text-transform: uppercase;
+	font-size: 16px;
+}
+
+.numbers{
+	font-weight: 700;
+	font-weight: 32pt;
+}
+
+#logo{
+	width: 10%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	position: absolute;
+	top: 90vh;
+	left: 45%;
+}
+.button_fb a{
+	color: white;
+	width: 20%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	
+    margin-bottom: 7vh;
+    text-decoration: none;
+	
+}
+.button_fb a i{
+	
+	margin-right:6px;
+}
+
+.button_fb a:hover {
+    opacity: 0.6;
+}
+
+
+
+@media (max-width: 767px) {
+
+	.title {
+		margin-top: 10px;
+		font-size: 22pt;
+	}
+	
+	.subtitle {
+		font-size: 15pt;
+	}
+
+	#clockdiv {
+		font-size: 25pt;
+	}
+	
+	#clockdiv div > span {
+    padding: 5px;
+	}
+	
+	#logo{
+		width: 30%;
+		left: 35%;
+	}
+	
+	
+}
+
+
+
+

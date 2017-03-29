@@ -1,0 +1,200 @@
+body{
+	text-align: center;
+	font-family: 'Oswald';
+	font-weight: 100;
+	color: white;
+	width: 100vw;
+    margin: 0px;
+	background:
+		linear-gradient(
+			rgba(65,65,65,0.7),
+			rgba(65,65,65,0.7)
+    	), url("../img/background.png");
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    vertical-align: middle;
+    background-color: #636363;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 50px 20px;
+	box-sizing: border-box;
+}
+
+.container_middle {
+	position: relative;
+}
+
+.overlay_color{
+	height: 100vh;
+	width: 100%;
+	background-color: rgba(238,50,36,0.2);
+	background-size: 100%;
+	display: block;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: -15;
+	-webkit-transition-duration: 0.2s;
+      -moz-transition-duration: 0.2s;
+      -o-transition-duration: 0.2s;
+      transition-duration: 0.2s;
+}
+
+.overlay{
+	height: 100vh;
+	width: 100%;
+	background-color: rgba(65,65,65,0.7);
+	background-size: 100%;
+	display: block;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: -10;
+}
+
+h1{
+	text-transform: uppercase;
+	font-weight: 100;
+	font-size: 50px;
+}
+
+.principal{
+	font-weight: 400;
+	font-size: 32pt;
+	text-transform: uppercase;
+	margin: 6px 40px 0px 40px;
+    font-family: 'Oswald';
+}
+
+.secundario{
+    font-weight: 300;
+    font-size: 16pt;
+	text-transform: uppercase;
+    margin: 6px 40px 0px 40px;
+}
+.precos{
+    font-weight: 300;
+    font-size: 13pt;
+    margin: 2px 0px 0px 0px;
+
+}
+
+#precos{
+    text-align: center;
+    width: 100%;
+}
+
+#clockdiv{
+	display: inline-block;
+	font-weight: 300;
+	text-align: center;
+	font-size: 48pt;
+}
+
+#clockdiv > div{
+	padding: 10px;
+	display: inline-block;
+}
+
+#clockdiv div > span{
+	padding: 30px;
+	display: inline-block;
+}
+
+.legenda{
+	display: inline-block;
+	text-transform: uppercase;
+	font-size: 16px;
+}
+
+#logo{
+	width: 70px;
+	height: auto;
+	padding: 10px 0px;
+}
+
+.title{
+	color: white;
+	margin: 0px;
+	margin-top: 20px;
+	font-size: 42pt;
+	font-weight: 700;
+}
+.border{
+    height: 0px;
+    width: 4%;
+    margin-left: 48%;
+    margin-right: 48%;
+
+    margin-top: 20px;
+    padding-top: 30px;
+    margin-bottom: 10px;
+
+  	border-bottom: 3px solid rgb(238,50,36);
+  	display: block;
+  	position: relative;
+
+}
+.subtitle{
+	color: white;
+	font-size: 22pt;
+	font-weight: 300;
+
+}
+.numbers{
+	font-weight: 700;
+	font-weight: 32pt;
+}
+#dias{
+    position: absolute;
+	top: 50%;
+  	transform: translateY(-50%);
+    text-align: right;
+    right: 0;
+    display: block;
+    padding: 10px 30px 10px 10px;
+}
+.dias{
+	opacity: 0.7;
+	color: white;
+    width: 100%;
+    font-weight: 400;
+    font-size: 11pt;
+    display: block;
+    text-transform: uppercase;
+    padding: 2px;
+    text-decoration: none;
+}
+.dias:hover{
+    cursor: pointer;
+    color: gray;
+}
+.dia_selected{
+	opacity: 1;
+    text-decoration: underline;
+    -webkit-transition-duration: 0.2s;
+      -moz-transition-duration: 0.2s;
+      -o-transition-duration: 0.2s;
+      transition-duration: 0.2s;
+}
+
+/*  pequeno */
+@media(max-width: 480px){
+	#dias{
+	    padding: 10px 10px 10px 10px;
+	}
+	.secundario{
+		font-size: 15pt;
+	}
+}
